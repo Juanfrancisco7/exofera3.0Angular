@@ -1,13 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Exofera30Angular</title>
+  <!-- TUS METADATOS PEGADOS AQUÍ -->
+  <title>@JuanFrancisco7</title>
+  <meta name="description" content="Portafolio de Juan Francisco Bencomo Chacín...">
+  <meta property="og:title" content="Portafolio | Juan Francisco (@JuanFrancisco7)">
+  <!-- ...otros meta tags... -->
+
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- TU FAVICON (apuntando a la carpeta assets) -->
+  <link rel="icon" type="image/png" href="assets/img/logotipo2.png">
+
+  <!-- TUS FUENTES PEGADAS AQUÍ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- SCRIPT DE GOOGLE TAG PEGADO AQUÍ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T2NZ5W17Z8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T2NZ5W17Z8');
+  </script>
 </head>
 <body>
-  <app-root></app-root>
+  <!-- El cuerpo principal de tu app. Angular insertará todo aquí. -->
+  <app-root></app-root> 
+
+  <!-- SCRIPT DE EMAILJS PEGADO AQUÍ (antes de cerrar el body) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.emailjs) { emailjs.init('MozjG_1EF6MduDcEx'); }
+    });
+  </script>
 </body>
 </html>
