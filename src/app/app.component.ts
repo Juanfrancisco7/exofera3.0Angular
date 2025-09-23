@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-// Paso 1: Importa tu HeaderComponent aquí
-import { HeaderComponent } from './components/header/header.component'; 
+
+// 1. Importamos los componentes que queremos usar
+import { HeaderComponent } from './components/header/header.component';
+import { BannerComponent } from './components/banner/banner.component'; // <-- ¡IMPORTANTE!
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  // Paso 2: Añade HeaderComponent a la lista de imports
+  // 2. Añadimos los componentes a la lista de 'imports' para que estén disponibles
   imports: [
-    RouterOutlet, 
-    HeaderComponent 
+    RouterOutlet,
+    HeaderComponent,
+    BannerComponent // <-- ¡IMPORTANTE!
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -17,3 +20,4 @@ import { HeaderComponent } from './components/header/header.component';
 export class AppComponent {
   title = 'Exofera3.0_Angular';
 }
+
