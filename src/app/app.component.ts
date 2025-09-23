@@ -3,7 +3,8 @@ import { RouterOutlet } from '@angular/router';
 
 // 1. Importamos los componentes que queremos usar
 import { HeaderComponent } from './components/header/header.component';
-import { BannerComponent } from './components/banner/banner.component'; // <-- ¡IMPORTANTE!
+import { BannerComponent } from './components/banner/banner.component';
+import { SobreMiComponent } from "./components/sobre-mi/sobre-mi.component";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,9 @@ import { BannerComponent } from './components/banner/banner.component'; // <-- �
     RouterOutlet,
     HeaderComponent,
     BannerComponent // <-- ¡IMPORTANTE!
-  ],
+    ,
+    SobreMiComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
