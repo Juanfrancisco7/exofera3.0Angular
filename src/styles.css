@@ -152,3 +152,8 @@ textarea {
     margin: 4px;
    
  }
+
+ /* AJUSTE POR HEADER FIJO (movido aquí desde el CSS del header) */
+ main {
+  padding-top: 80px;
+}
