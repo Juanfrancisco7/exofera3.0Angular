@@ -2,25 +2,32 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <!-- TUS METADATOS PEGADOS AQUÍ -->
+  <!-- METADATOS -->
   <title>@JuanFrancisco7</title>
   <meta name="description" content="Portafolio de Juan Francisco Bencomo Chacín...">
   <meta property="og:title" content="Portafolio | Juan Francisco (@JuanFrancisco7)">
-  <!-- ...otros meta tags... -->
-
+  
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- TU FAVICON (apuntando a la carpeta assets) 
-  <link rel="icon" type="image/png" href="assets/img/logotipo2.png">
--->
+  <!-- TU FAVICON (Asegúrate de que el archivo esté en public/img) -->
+  <link rel="icon" type="image/png" href="img/logotipo2.png">
   
-  <!-- TUS FUENTES PEGADAS AQUÍ -->
+  <!-- TUS FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- SCRIPT DE GOOGLE TAG PEGADO AQUÍ -->
+  <!-- ============================================= -->
+  <!-- === LIBRERÍAS CSS EXTERNAS AÑADIDAS AQUÍ === -->
+  <!-- ============================================= -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <!-- Lireria FA se complico al migrarla ya que anteiormente se agregaba directamente en
+   angularjson pero, en la actualidad se agrega directamente aqui en index.hmtl  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- SCRIPT DE GOOGLE TAG -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-T2NZ5W17Z8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -30,15 +37,21 @@
   </script>
 </head>
 <body>
-  <!-- El cuerpo principal de tu app. Angular insertará todo aquí. -->
+  <!-- El cuerpo principal de la app. Angular insertará todo aquí. -->
   <app-root></app-root> 
 
-  <!-- SCRIPT DE EMAILJS PEGADO AQUÍ (antes de cerrar el body) -->
+  <!-- SCRIPT DE EMAILJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function(){
       if (window.emailjs) { emailjs.init('MozjG_1EF6MduDcEx'); }
     });
   </script>
+
+  <!-- ================================================ -->
+  <!-- === LIBRERÍA JAVASCRIPT EXTERNA AÑADIDA AQUÍ (no se agrega en anguarjson en versiones posteriores, en 
+   anteriores si!!! MOSCA.) === -->
+  <!-- ================================================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>

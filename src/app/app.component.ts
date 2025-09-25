@@ -5,6 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { SobreMiComponent } from "./components/sobre-mi/sobre-mi.component";
+import { SkillsHobbiesComponent } from "./components/skills-hobbies/skills-hobbies.component";
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { SobreMiComponent } from "./components/sobre-mi/sobre-mi.component";
     HeaderComponent,
     BannerComponent // <-- ¡IMPORTANTE!
     ,
-    SobreMiComponent
+    SobreMiComponent,
+    SkillsHobbiesComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -84,12 +84,9 @@
                 "input": "public"
               }
             ],
-         "styles": [
-  "src/styles.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css",
-  "https://unpkg.com/swiper/swiper-bundle.min.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-],
+            "styles": [
+              "src/styles.css"
+            ],
             "scripts": []
           }
         }
@@ -100,3 +97,4 @@
     "analytics": "d2c1a64a-dea4-4f31-bfbe-f1ff0946bc05"
   }
 }
+
