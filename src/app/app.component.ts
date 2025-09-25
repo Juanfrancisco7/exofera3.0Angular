@@ -8,6 +8,7 @@ import { SobreMiComponent } from "./components/sobre-mi/sobre-mi.component";
 import { SkillsHobbiesComponent } from "./components/skills-hobbies/skills-hobbies.component";
 import { CertificacionesComponent } from './components/certificaciones/certificaciones.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { GaleriaComponent } from './components/galeria/galeria.component';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     SobreMiComponent,
     SkillsHobbiesComponent,
     CertificacionesComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    GaleriaComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
