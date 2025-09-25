@@ -46,6 +46,10 @@ table {
 	border-spacing: 0;
 }
 
+body {
+  padding-top: 80px; /* Este valor debe coincidir con la altura del header */
+}
+
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   body{

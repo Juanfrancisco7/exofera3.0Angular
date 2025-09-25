@@ -1,38 +1,51 @@
 import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Necesario para [class] y [style]
+import { CommonModule } from '@angular/common'; // Needed for [ngClass]
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [ CommonModule ], // Importamos CommonModule aquí
+  imports: [CommonModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
-  // --- TRADUCCIÓN DE LA LÓGICA DEL MENÚ HAMBURGUESA ---
-  // Esta variable reemplaza la necesidad de buscar el 'navContent' y añadir/quitar la clase 'active'.
+  // Property to control if the mobile menu is open or closed.
   isMenuOpen = false;
 
-  // Esta función es llamada por el (click)="toggleMenu()" en tu HTML.
-  toggleMenu() {
+  // Properties to control hiding the header on scroll.
+  isHeaderHidden = false;
+  private lastScrollTop = 0;
+  private scrollThreshold = 10; // Prevents triggering on very small scrolls
+
+  // Opens or closes the menu
+  toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  // --- TRADUCCIÓN DE LA LÓGICA DE OCULTAR/MOSTRAR CON SCROLL ---
-  // Estas variables reemplazan la necesidad de 'lastScrollTop' y de manipular el 'header.style.transform'.
-  isHeaderHidden = false;
-  private lastScrollTop = 0;
+  // Closes the menu (useful for mobile menu links)
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
 
-  // El decorador @HostListener es la forma "Angular" de hacer un window.addEventListener('scroll', ...).
+  // Listens to the scroll event on the entire page
   @HostListener('window:scroll')
-  onWindowScroll() {
+  onWindowScroll(): void {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Si el usuario baja y no está en la parte superior, ocultamos el header.
-    this.isHeaderHidden = (scrollTop > this.lastScrollTop) && (scrollTop > 0);
+    // If the scroll is very small, do nothing
+    if (Math.abs(scrollTop - this.lastScrollTop) <= this.scrollThreshold) {
+      return;
+    }
+
+    // Hide if scrolling down and far from the top
+    if (scrollTop > this.lastScrollTop && scrollTop > 80) { // 80 is the header height
+      this.isHeaderHidden = true;
+    } else {
+      // Show if scrolling up
+      this.isHeaderHidden = false;
+    }
     
-    // Actualizamos la última posición de scroll.
     this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   }
 }
+
