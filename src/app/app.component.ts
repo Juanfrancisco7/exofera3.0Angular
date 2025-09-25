@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { SobreMiComponent } from "./components/sobre-mi/sobre-mi.component";
 import { SkillsHobbiesComponent } from "./components/skills-hobbies/skills-hobbies.component";
+import { CertificacionesComponent } from './components/certificaciones/certificaciones.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { SkillsHobbiesComponent } from "./components/skills-hobbies/skills-hobbi
     BannerComponent // <-- ¡IMPORTANTE!
     ,
     SobreMiComponent,
-    SkillsHobbiesComponent
+    SkillsHobbiesComponent,
+    CertificacionesComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
