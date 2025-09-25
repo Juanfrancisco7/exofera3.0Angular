@@ -9,6 +9,7 @@ import { SkillsHobbiesComponent } from "./components/skills-hobbies/skills-hobbi
 import { CertificacionesComponent } from './components/certificaciones/certificaciones.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { GaleriaComponent } from './components/galeria/galeria.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,8 @@ import { GaleriaComponent } from './components/galeria/galeria.component';
     SkillsHobbiesComponent,
     CertificacionesComponent,
     ProyectosComponent,
-    GaleriaComponent
+    GaleriaComponent,
+    ContactoComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
