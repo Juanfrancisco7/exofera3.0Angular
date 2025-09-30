@@ -38,22 +38,12 @@ export class ContactoComponent {
     emailjs.send(serviceID, templateID, form.value)
       .then(() => {
         this.isSending = false;
-        // Mostramos el mensaje de éxito personalizado.
+        // ¡HEMOS INTRODUCIDO TU MENSAJE PERSONALIZADO AQUÍ!
         this.showNotification(
           'Gracias por contactar a Juan Francisco. Debido a una alta demanda de mensajes, es posible que la respuesta tome un poco más de tiempo de lo habitual. Si tu consulta es urgente, te recomendamos contactarlo por otra vía disponible.',
           'success'
         );
         form.resetForm();
-
-        // ¡NUEVA FUNCIONALIDAD AÑADIDA AQUÍ!
-        // Después de 10 segundos, la página volverá arriba suavemente.
-        setTimeout(() => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Esto crea la animación de scroll suave.
-          });
-        }, 10000);
-
       }, (err: any) => {
         this.isSending = false;
         this.showNotification('Hubo un error al enviar el mensaje. Inténtalo de nuevo.', 'error');
@@ -70,4 +60,3 @@ export class ContactoComponent {
     }, 10000); // 10 segundos, como en tu JS original.
   }
 }
-
